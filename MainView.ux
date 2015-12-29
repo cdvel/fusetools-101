@@ -1,0 +1,45 @@
+<App Background="#333333ff">
+	<Fuse.BasicTheme.BasicTheme>
+    	<Text FontSize="24" TextColor="#fff"/>
+    </Fuse.BasicTheme.BasicTheme>
+   	<Font File="Roboto-Medium.ttf" ux:Global="Medium" />
+    <Font File="Roboto-Light.ttf" ux:Global="Light" />
+    <DockPanel>
+        <StatusBarBackground Dock="Top" />
+        <ScrollView ClipToBounds="true">
+            <StackPanel>
+                <Slider />
+                <Button Text="Button" />
+                <Switch Alignment="Left" />
+                <Text>Lorem ipsum</Text>
+				<Rectangle Width="50" Height="50" Fill="#888" />
+				<Text>Hello world!</Text>
+				<Text TextWrapping="Wrap">Lorem Ipsum(...)</Text>
+		        <Text TextAlignment="Center" TextColor="#f99" Font="Light">Roboto Light</Text>
+        		<Text FontSize="24" TextAlignment="Right" Font="Medium">Roboto Medium</Text>
+        		<Text LineSpacing="10" Font="Light">
+        			Roboto Light 
+        			again
+        		</Text>	
+        		<Number Value="3.14159265359" Format="F03" />
+        		<Image Url="https://avatars2.githubusercontent.com/u/10243317" />
+				<Image File="Unsplash1.jpg" />	
+				<!-- Contents from resources  -->
+			    <FileImageSource ux:Key="pic2" File="images/Unsplash2.jpg" />
+				<StackPanel>
+				    <JavaScript>
+				        module.exports = {
+				            imageResource: "pic2",
+				            url: "https://avatars2.githubusercontent.com/u/10243317?v=3&s=200"
+				        }
+				    </JavaScript>
+				    <Image File="images/Unsplash3.jpg" />
+				    <Image Source="{DataToResource imageResource}" />
+				    <Image Color="#f00" Url="{url}" />
+				</StackPanel>
+            </StackPanel>
+        </ScrollView>
+    </DockPanel>
+
+
+</App>
